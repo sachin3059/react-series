@@ -8,6 +8,7 @@
 <body>
     <div id="root"></div>
 
+    <!-- injecting javascript in html     -->
     <!-- <script>
         const heading = document.createElement("h2");
         heading.innerHTML = "Hello World 💪 from javascript";
@@ -18,6 +19,14 @@
 
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+    <!-- now inject using react -->
+     <script>
+        const heading = React.createElement("h2", {}, "Hello World 💪 from react");
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(heading);
+     </script>
     
 </body>
 </html>
