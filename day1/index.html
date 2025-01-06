@@ -4,33 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div id="root"></div>
     <div id="sachin"></div>
 
-    <!-- injecting javascript in html     -->
-    <!-- <script>
-        const heading = document.createElement("h2");
-        heading.innerHTML = "Hello World 💪 from javascript";
-        
-        const root = document.getElementById("root");
-        root.appendChild(heading);
-    </script> -->
-
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-
-    <!-- now inject using react -->
-     <script>
-        const heading = React.createElement("h2", {}, "Hello World 💪 from react");
-        const root = ReactDOM.createRoot(document.getElementById("root"));
-        root.render(heading);
-        const sachin = React.createElement("h3", {}, "Hello , 🙏 sachin this side");
-        const sachinRoot = ReactDOM.createRoot(document.getElementById("sachin"));
-        sachinRoot.render(sachin);
-     </script>
+    <script src="./app.js"></script>
     
 </body>
 </html>
