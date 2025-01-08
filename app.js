@@ -15,11 +15,19 @@ const HeadingComponent = () => {
     return <h1>Functional react component 🙏</h1>
 };
 
+const number = 10;
+
 const  HeadingComponent2 = () => {
     return (
         <div className="container">
             {/* here i also rendered another functional component HeadingComponent */}
             <HeadingComponent />  
+
+            {/* inside curly bracket we can write js code */}
+            <h1>{number}</h1>
+
+            {/* we can also put react element inside fucntional component */}
+            {Jsxheading} 
             <h1>React Fucntional component  for multiple line of jsx</h1>
         </div> 
     )
