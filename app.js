@@ -1,53 +1,54 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// JSX
-// jsx => babel transpiles to react.createElement => html
-const Jsxheading = <h1 className="heading1"> React Element sachin kumar ❤️</h1>;
-
-
-
-// React component
-// Class Based component -> old way of writying component
-// Functional Component -> new way of writing component
-
-const HeadingComponent = () => {
-    return <h1>Functional react component 🙏</h1>
-};
-
-const number = 10;
-
-const  HeadingComponent2 = () => {
+const Header = () =>{
     return (
-        <div className="container">
-            {/* here i also rendered another functional component HeadingComponent */}
-            <HeadingComponent />  
+        <div className="header">
+            
+            <div className="logo">
+                <img src="https://www.pngkey.com/png/full/114-1149878_logo-clipart-website-logo-png.png" alt="logo" />
+            </div>
 
-            {/* inside curly bracket we can write js code */}
-            <h1>{number}</h1>
+            <div className="search-bar">
+                <input type="text" placeholder="Search" />
+            </div>
 
-            {/* we can also put react element inside fucntional component */}
-            {Jsxheading} 
-            <h1>React Fucntional component  for multiple line of jsx</h1>
-        </div> 
+            <div className="user-icon">
+                <img src="https://www.pngkey.com/png/full/114-1149878_logo-clipart-website-logo-png.png" alt="user-icon" />
+            </div>
+            
+        </div>
     )
 };
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header />);
 
 
-// rendering of react element or jsx
-const jsxroot = ReactDOM.createRoot(document.getElementById("root1"));
-jsxroot.render(Jsxheading);
+const Body = () =>{
+    return (
+        <div className="main-body">
+            <h1>Assignment 1 ✅ </h1>
+        </div>
+    )
+}
+
+const bodyRoot = ReactDOM.createRoot(document.getElementById("body"));
+bodyRoot.render(<Body />);
+
+
+const Footer = () => {
+    return (
+        <div className="footer">
+            <h1>©️ 2025 made by sachin . All rights reserved</h1>
+        </div>
+    )
+}
+
+const footerRoot = ReactDOM.createRoot(document.getElementById("foot"));
+footerRoot.render(<Footer />);
 
 
 
 
-// now how to render functional component;
-
-const root = ReactDOM.createRoot(document.getElementById("root2"));
-root.render(<HeadingComponent />);
-
-
-const root1 = ReactDOM.createRoot(document.getElementById("root3"));
-root1.render(<HeadingComponent2 />);
 
