@@ -1,83 +1,76 @@
-.header{
+body{
+    padding: 0px 100px;
+}
+.header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000;
 }
 
 .logo img{
-    height: 50px;
-    width: auto;
+    width: 100px;
+    height: auto;
 }
 
-.search-bar{
-    flex: 1;
+.nav-items{
     display: flex;
-    justify-content: center;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 5px 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.search-bar input{
-    width: 80%;
-    padding: 8px, 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-.search-bar input:focus{
-    border-color: #007bff;
-}
-
-
-.user-icon img{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.user-icon img:hover{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-
-.main-body{
-    padding: 20px;
-}
-
-.main-body h1{
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
-    padding-top: 100px;
-}
-
-#foot {
-    position:fixed;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background-color: #f8f9fa;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.footer{
-    justify-content: center;
-    align-items: center;
-    
+.nav-items ul{
+    display: flex;
+    list-style: none;
 }
 
-.footer h1{
-    text-align: center;
+.nav-items ul li{
+    padding: 10px 30px;
     font-size: 20px;
 }
+
+
+.body > .restaurent-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.body > .search{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.body > .search > input{
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+.body > .search > button{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.restaurent-container > .restaurent-card{
+    width: 20%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.restaurent-container :hover{
+    background-color: rgb(157, 198, 233);
+}
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+}
+
