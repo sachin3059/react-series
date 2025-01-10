@@ -74,3 +74,13 @@ body{
     background-color: antiquewhite;
 }
 
+.filter-div{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-div > .filter-btn{
+    padding: 5px;
+    cursor: pointer;
+}
+
