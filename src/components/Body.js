@@ -1,57 +1,43 @@
 import RestaurentCard from "./RestaurentCard.js";
 import resList from "../utils/mockData.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+import Shimmer from "./Shimmer.js";
 
 const Body = () => {
 
     // local state variable - super powerful variable
 
-    // const arr = useState(resList);
-    // const [listofRestarurent, setlistofRestaurent] = arr;
-
-    // above and below do same work , above is destructuring of array
-
-    // or 
     
-    const [listOfRestaurent, setlistofRestaurent] = useState(resList);
+    const [listOfRestaurent, setlistofRestaurent] = useState([]);
 
-    // or 
-    // const arr = useState(resList);
-    // const listofRestarurent = arr[0];
-    // const setlistofRestaurent = arr[1];
- 
-
-    // Normal js variable:
-    //let listOfRestaurent= [];
+    useEffect(()=>{
+        console.log("useEffect called");
+        // fetch data from server
+        //fetchData();
+    }, []); 
 
 
-    // normal javascript variable
-    // let listOfRestaurentJS = [
-    //     {
-    //         id: 1,
-    //         name: 'KFC',
-    //         cousines: 'Burgers, fried-chicken, Biryani, Fast Food',
-    //         rating: 3.8,
-    //         forTwo: 400,
-    //         delivaryTime: 36
-    //     },
-    //     {
-    //         id: 2,
-    //         name: 'Meghna Foods',
-    //         cousines: 'Biryani, Andhra , South Indian, Chinees, Seafood',
-    //         rating: 4.4,
-    //         forTwo: 500,
-    //         delivaryTime: 29
-    //     },
-    //     {
-    //         id: 3,
-    //         name: 'OAC',
-    //         cousines: 'wad-pav, maggi, night-cantten',
-    //         rating: 4.1,
-    //         forTwo: 450,
-    //         delivaryTime: 5
-    //     }
-    // ]; 
+    const fetchData = async () => {
+        const data = await fetch("https://www.zomato.com/webroutes/auth/init");
+        const jsonData = await data.json();
+        console.log(jsonData);
+
+        // now set listOfRestaurent with the fetched data
+        // setlistofRestaurent(jsonData);
+    }
+
+    // useEffect is a hook that is called when the component is mounted/Rerendered
+
+    console.log("Body Component Rendered");
+
+    // In console first "Body component Rendered" will be printed and then "useEffect called" will be printed
+
+
+    // if listOfRestaurent is empty then it will print "LOADING...." else it will print the restaurent list
+    if(listOfRestaurent.length === 0){
+        return <Shimmer />
+    }
 
     return (
         <div className="body">
