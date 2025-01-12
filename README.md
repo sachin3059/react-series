@@ -75,6 +75,8 @@ import { Component } from "path";
 - Client side Routing
 - Server side Routing
 
+# Routing
+
 - createBrowserRouter
 - RouterProvider
 - outlet
