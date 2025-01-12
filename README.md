@@ -74,3 +74,10 @@ import { Component } from "path";
 # 2 Types of Routing in Web Apps
 - Client side Routing
 - Server side Routing
+
+- createBrowserRouter
+- RouterProvider
+- outlet
+
+- useParams
+- <Link> </Link>  //basically uses anchor tag behind the scene
