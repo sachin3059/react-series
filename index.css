@@ -95,3 +95,8 @@ body{
     margin: 20px 20px;
 }
 
+button{
+    cursor: pointer;
+}
+
+
