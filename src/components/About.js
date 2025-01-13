@@ -1,8 +1,11 @@
+import User from "./User";
+import UserClass from "./UserClass";
 const About = () => {
     return (
         <div>
             <h1>About us</h1>
-            <h2>This is About us page</h2>
+            < User name={"sachin Kumar(function)"} />
+            < UserClass name={"sachin Kumar(class)"} />
         </div>
     );
 };
