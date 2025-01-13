@@ -83,3 +83,9 @@ import { Component } from "path";
 
 - useParams
 - <Link> </Link>  //basically uses anchor tag behind the scene
+
+
+# Class Based Component
+
+- it is normally a javascript class
+- props are passed using constructor
