@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import Shimmer from "./Shimmer.js";
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 
 const Body = () => {
 
@@ -41,6 +42,12 @@ const Body = () => {
     // conditional rendering
     if(listOfRestaurent.length === 0){
         return <Shimmer />
+    }
+
+    const onlineStatus = useOnlineStatus();
+
+    if(!onlineStatus){
+        return <h1>Looks like you're offline please check your internet connection</h1>
     }
 
     return (

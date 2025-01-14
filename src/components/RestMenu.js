@@ -2,11 +2,18 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import resList from "../utils/mockData.js";
 import { useParams } from "react-router-dom";
+import useRestaurantMenu from "../utils/useRestaurantMenu.js";
 
 const RestMenu = () => {
 
     const [resInfo, setResInfo] = useState([]);
     const {resId} = useParams();
+    
+    // custom hooks
+
+    const data = useRestaurantMenu();
+    console.log(data);
+
     
 
     useEffect(() => {

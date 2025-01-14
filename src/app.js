@@ -1,4 +1,4 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import ReactDOM from "react-dom/client"
 
 import Header from "./components/Header.js";
@@ -11,6 +11,17 @@ import Cart from "./components/Cart.js";
 import RestMenu from "./components/RestMenu.js";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Shimmer from "./components/Shimmer.js";
+//import Grocery from "./components/Grocery.js";
+
+
+// chunking
+// code splitting
+// dynamic bundling
+// lazy loading
+
+
+const Grocery = lazy(() => import("./components/Grocery.js")) 
 
 
 const AppLayout = () => {
@@ -55,6 +66,11 @@ const appRouter = createBrowserRouter([
             path: "/restaurants/:resId", // means this url is dynamic
             element: <RestMenu/>,
             errorElement: <Error/>
+        },
+        {
+            path: "/grocery",
+            element: <Suspense fallback={<h1>This  is Grocery</h1>}> <Grocery /></Suspense>,
+            errorElement: <Error />
         }
         ],
         errorElement: <Error />
