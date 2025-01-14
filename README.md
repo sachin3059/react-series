@@ -83,3 +83,9 @@ import { Component } from "path";
 
 - useParams
 - <Link> </Link>  //basically uses anchor tag behind the scene
+
+# customs hooks
+
+# lazy loading
+- lazy
+- Suspense
